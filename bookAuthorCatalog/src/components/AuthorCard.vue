@@ -17,17 +17,19 @@ export default {
     authorBio: String,
     authorImage: String,
     authorId: Number,
+    authors: Array,
+    authorIndex: Number
   },
 
   methods: {
     deleteAuthor (event, authorId) {
       fetch('https://tower-project-bookcatalog.herokuapp.com/authors/' + this.authorId, {
         method: 'DELETE'
-      })       
+      }) 
     }
   }
-  
 }
+  
 
 </script>
 
@@ -40,6 +42,7 @@ export default {
 }
 
 </style>
+
 
 
 

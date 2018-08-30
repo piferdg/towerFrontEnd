@@ -8,6 +8,9 @@
         </textarea>
       <button name="submit" value="submit" type="submit" variant="warning">Submit</button>
     </form>
+    <router-link to="/books" class="back-to-books">
+      <h2>Back to Books</h2>
+    </router-link>
   </div>
 </template>
 
@@ -62,5 +65,9 @@ export default {
 </script>
 
 <style>
+
+.back-to-books {
+  color: white;
+}
 
 </style>

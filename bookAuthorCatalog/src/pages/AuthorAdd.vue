@@ -8,6 +8,9 @@
         </textarea>
       <button name="submit" value="submit" type="submit" variant="warning">Submit</button>
     </form>
+    <router-link to="/authors" class="back-to-authors">
+      <h2>Back to Authors</h2>
+    </router-link>
   </div>
 </template>
 
@@ -49,7 +52,6 @@ export default {
           this.$emit("posted");
         });
     },
-    //   console.log(newPost)
 
     resetForm() {
       this.first_name = null;
@@ -62,6 +64,10 @@ export default {
 </script>
 
 <style>
+
+.back-to-authors {
+  color: white;
+}
 /* #modal1 {
     color: #007aff;
   }
