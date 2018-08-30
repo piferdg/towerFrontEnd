@@ -10,7 +10,7 @@ import Header from "./components/Header";
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
   },
   
 }
@@ -18,6 +18,8 @@ export default {
 
 <style>
 #app {
+  background: url('./assets/library.jpg');
+  min-height: 100vh;
   
 }
 </style>

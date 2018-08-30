@@ -12,24 +12,26 @@
 </template>
 
 <script>
-
 export default {
-  name: 'LandingPage',
-  
-}
-
+  name: "LandingPage"
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
 .landing-page {
   display: flex;
   justify-content: space-around;
 }
 
 .landing-page h2 {
- text-align: center
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
-
+.books-main,
+.authors-main {
+  text-decoration: none;
+}
 </style>

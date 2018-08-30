@@ -1,13 +1,24 @@
 <template>
   <div class="books-main">
-    <h1>Books!</h1>
+    <Sidebar />
+    <div class="book-container">
+      <BookCard v-for="book in books" :bookTitle='book.title' :bookGenre='book.genre' :bookDescription='book.description' :bookCover='book.cover_url' :bookId='book.id' :key='book.id'/>
+    </div>
+    <router-link to="/bookadd">
+      <button>Add Book</button>
+    </router-link>
   </div>
 </template>
 
 <script>
-
+import BookCard from "../components/BookCard"
+import Sidebar from "../components/Sidebar"
 export default {
   name: 'Books',
+  components: {
+    BookCard,
+    Sidebar
+  },
  
   data() {
     return {
@@ -34,6 +45,19 @@ mounted() {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+
+.books-main {
+  display: flex;
+  justify-content: flex-start
+}
+
+.book-container {
+  margin: 1vw;
+  background-color:rgb(255, 255, 255, 0.8);
+  width: 75vw;
+  margin-left: 6vw;
+}
 
 </style>
+
