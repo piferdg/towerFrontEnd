@@ -1,13 +1,15 @@
 <template>
   <div>
-    <form v-on:submit.prevent='onSubmit' v-on:submit="resetForm">
-      <input v-model="first_name" name="first_name" required placeholder="First Name"><br>
-      <input v-model="last_name" name="last_name" required placeholder="Last Name"><br>
-      <input v-model="portrait_url" name="portrait_url" required placeholder="Image URL"><br>
-        <textarea id="textarea2" v-model="bio" name="bio" placeholder="Biography..." :rows="3">
-        </textarea>
-      <button name="submit" value="submit" type="submit" variant="warning">Submit</button>
-    </form>
+    <div class="author-form">
+      <form v-on:submit.prevent='onSubmit' v-on:submit="resetForm">
+        <input v-model="first_name" name="first_name" required placeholder="First Name"><br>
+        <input v-model="last_name" name="last_name" required placeholder="Last Name"><br>
+        <input v-model="portrait_url" name="portrait_url" required placeholder="Image URL"><br>
+          <textarea id="textarea2" v-model="bio" name="bio" placeholder="Biography..." :rows="3">
+          </textarea><br>
+        <button name="submit" value="submit" type="submit" variant="warning">Submit</button>
+      </form>
+    </div>
     <router-link to="/authors" class="back-to-authors">
       <h2>Back to Authors</h2>
     </router-link>
@@ -63,37 +65,24 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
-.back-to-authors {
+.back-to-authors h2 {
   color: white;
+  margin-left: 40vw;
 }
-/* #modal1 {
-    color: #007aff;
-  }
-  
-  h6 {
-    color: rosybrown;
-  }
-  
-  .btn {
-    width: 100%;
-    margin-top: 0;
-  }
-  
-  .btn-warning {
-    background: linear-gradient(90deg, rgba(255, 185, 28, 1) 0%, rgba(255, 221, 58, 1) 50%, rgba(255, 215, 45, 1) 100%);
-  }
-  
-  .btn-warning:hover {
-    background-color: #e1ac74;
-  }
-  
-  .btn-primary {
-    display: none !important;
-  }
-  
-  .btn-success {
-    background-color: #ffdc36;
-  } */
+
+.author-form {
+  margin-left: 40vw;
+  margin-top: 10vw;
+}
+
+.author-form input {
+  margin: 1vh;
+}
+
+.author-form textarea {
+  margin: 1vh;
+}
+
 </style>

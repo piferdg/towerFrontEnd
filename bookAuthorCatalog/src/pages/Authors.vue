@@ -2,7 +2,7 @@
   <div class="authors-main">
     <Sidebar />
     <div class='author-container'>
-      <AuthorCard :authors='authors' v-for="(author, index) in authors" :authorFirstName='author.first_name' :authorLastName='author.last_name' :authorBio='author.bio' :authorImage='author.portrait_url' :authorId='author.id' :authorIndex='index' :key='author.id'/>
+      <AuthorCard v-for="(author, index) in authors" :authorFirstName='author.first_name' :authorLastName='author.last_name' :authorBio='author.bio' :authorImage='author.portrait_url' :authorId='author.id' :authorIndex='index' :key='author.id'/>
     </div>
     <router-link to="/authoradd">
       <button>Add Author</button>
